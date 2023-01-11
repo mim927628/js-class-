@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="person"></p>
+    <p id="department"></p>
+    <p id="fullinfo"></p>
+    <p id="sum"></p>
+    <p id="sub"></p>
+
+    <script>
+        var person={
+            firstname : "Sumaiya",
+            lastname : "Mim",
+            department : "CSE",
+            roll : 927628,
+            fullname:function(){
+                return this.firstname + " " + this.lastname;
+            },
+            getfullinfo:function(){
+                var txt = "First Name:" + this.firstname + "<br>";
+                txt += "Last Name:" + this.lastname + "<br>";
+                txt += "Department:" + this.department + "<br>";
+                txt += "Roll:" + this.roll;
+                return txt;
+            }
+        }
+        document.getElementById("person").innerHTML = person.fullname();
+        document.getElementById("department").innerHTML = person.department;
+        document.getElementById("fullinfo").innerHTML = person.getfullinfo();
+
+
+        // indexed array
+        var cars=["BMW", "Volvo", "Audi"];
+        cars[1]="YAMAHA";
+
+
+        // associative array
+        var person1 = [];
+        person1["firstname"] = "Jhon";
+        person1["lastname"] = "Khan";
+        person1["department"] = "CSE";
+
+// function
+        function sum(v1,v2){
+            return v1 + v2;
+        }
+
+        document.getElementById("sum").innerHTML = sum(10,50);
+
+
+
+        function sub(v1,v2){
+            return v1 - v2;
+        }
+
+        document.getElementById("sub").innerHTML = sub(10,50);
+
+    </script>
+</body>
+</html>
